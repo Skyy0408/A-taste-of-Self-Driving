@@ -1,0 +1,4 @@
+model:
+    forward_model_path: "/home/us441/nvidia-collab/vlad/results/fm/km_no_action/fm_km_no_action_64/seed=42/checkpoints/last.ckpt"
+training:
+    diffs: False

@@ -1,0 +1,45 @@
+comment: 'sweep 10 - wild-sweep-42'
+cost:
+  artifact_power: 2
+  dreaming_z_reg: 0.1
+  gamma: 0.99
+  lambda_a: 0.0
+  lambda_j: 0.0
+  lambda_l: 0.31622776601683794
+  lambda_o: 0.31622776601683794
+  lambda_p: 1.0
+  safe_factor: 1.5
+  skip_contours: true
+  u_hinge: 0.5
+  u_reg: 0.0
+  uncertainty_n_batches: 100
+  uncertainty_n_models: 10
+  uncertainty_n_pred: 30
+cost_type: continuous
+dataset_partition: test
+debug: false
+diffs: false
+mpc:
+  batch_size: 1
+  ce_repeat_step: 5
+  fm_unfold_samples: 1
+  fm_unfold_samples_agg: max
+  fm_unfold_variance: 1.0
+  lambda_j_mpc: 0.0001
+  lr: 0.31622776601683794
+  n_iter: 11
+  optimizer: Adam
+  planning_freq: 2
+  save_opt_stats: true
+  timestep: 0.1
+  unfold_len: 20
+  unfolding_agg: max
+  update_ref_period: 100
+  use_fm: true
+num_processes: 8
+output_dir: null
+pass_gt_future: false
+save_gradients: false
+seed: 42
+slurm: false
+visualizer: 'dump'

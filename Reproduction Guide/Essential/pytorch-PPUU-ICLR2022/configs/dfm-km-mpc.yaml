@@ -1,0 +1,45 @@
+cost:
+  agg_func_str: sum
+  curl: 0
+  dreaming_z_reg: 0.1
+  gamma: 0.99
+  lambda_a: 0.0
+  lambda_d: 0.001
+  lambda_j: 0.0
+  lambda_l: 3.05822606313438
+  lambda_o: 2.878694752705513
+  lambda_p: 91.18086756859383
+  lambda_r: 1.0
+  mask_coeff: 100.0
+  masks_power_x: 30
+  masks_power_y: 30
+  reference_distance_loss: true
+  rotate: 1
+  safe_factor: 4.0
+  shifted_reference_frame: 0
+  skip_contours: true
+  u_hinge: 0.5
+  u_reg: 0.0
+  uncertainty_n_batches: 100
+  uncertainty_n_models: 10
+  uncertainty_n_pred: 30
+cost_type: km_taper
+debug: false
+diffs: false
+mpc:
+  batch_size: 3
+  fm_unfold_samples: 3
+  fm_unfold_samples_agg: max
+  fm_unfold_variance: 1.0
+  lambda_j_mpc: 0.1
+  lr: 0.48148148148148145
+  n_iter: 27
+  optimizer: SGD
+  optimizer_budget: null
+  planning_freq: 2
+  timestep: 0.1
+  unfold_len: 20
+  unfolding_agg: max
+  update_ref_period: 100
+  use_fm: true
+num_processes: 10

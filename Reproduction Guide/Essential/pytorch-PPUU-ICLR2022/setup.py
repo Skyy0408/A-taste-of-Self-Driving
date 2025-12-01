@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+from setuptools import find_packages, setup
+
+setup(
+    name="ppuu",
+    version="0.0.1",
+    description="Predictive Policy Under Uncertainty",
+    author="",
+    author_email="",
+    url="https://github.com/vladisai/pytorch-PPUU",
+    install_requires=[
+        "pytorch-lightning==1.3.4",
+        "torch",
+        "numpy",
+        "pandas",
+        "omegaconf",
+        "wandb",
+        "gym",
+        "submitit",
+        "pygame",
+        "imageio",
+        "torchvision",
+        "nevergrad",
+    ],
+    packages=find_packages(),
+)
