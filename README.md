@@ -70,7 +70,7 @@ $$
 x_{t+1} &= x_t + s_t u_t^x \Delta t, \\
 y_{t+1} &= y_t + s_t u_t^y \Delta t, \\
 s_{t+1} &= s_t + a_{t,0} \Delta t, \\
-(u_{t+1}^x, u_{t+1}^y) &= \operatorname{unit}\big[(u_t^x, u_t^y) + a_{t,1} \Delta t \,(u_t^y, -u_t^x)\big],
+(u_{t+1}^x, u_{t+1}^y) &= \text{unit}\big[(u_t^x, u_t^y) + a_{t,1} \Delta t \,(u_t^y, -u_t^x)\big],
 \end{aligned}
 $$
 
@@ -87,11 +87,7 @@ $$
 The trajectory cost $C$ is computed as a weighted sum of interpretable components:
 
 $$
-C = \alpha_{\text{lane}} C_{\text{lane}}
-   + \alpha_{\text{offroad}} C_{\text{offroad}}
-   + \alpha_{\text{proximity}} C_{\text{proximity}}
-   + \alpha_{\text{destination}} C_{\text{destination}}
-   + \alpha_{\text{jerk}} C_{\text{jerk}}.
+C = \alpha_{\text{lane}} C_{\text{lane}} + \alpha_{\text{offroad}} C_{\text{offroad}} + \alpha_{\text{proximity}} C_{\text{proximity}} + \alpha_{\text{destination}} C_{\text{destination}} + \alpha_{\text{jerk}} C_{\text{jerk}}.
 $$
 
 The safety terms ($C_{\text{lane}}, C_{\text{offroad}}, C_{\text{proximity}}$) are defined as pointwise inner products between the environment channels predicted by $f_\theta^{\text{env}}$ and the fixed, differentiable cost masks.
